@@ -28,6 +28,14 @@ public class App {
         // Affichez le message
         System.out.println(message);
 
+        // Obtenez tous les noms des beans (composants) dans le contexte
+        String[] beanNames = context.getBeanDefinitionNames();
+
+        // Parcourez les noms des beans et affichez-les
+        for (String beanName : beanNames) {
+            System.out.println(beanName);
+        }
+
         // Fermez le contexte
         context.close();
 
